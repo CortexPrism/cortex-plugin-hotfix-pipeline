@@ -1,0 +1,23 @@
+{
+  "name": "cortex-plugin-hotfix-pipeline",
+  "version": "1.0.0",
+  "description": "Hotfix Deployment Pipeline — Streamlined path for critical fixes: build, smoke test, canary deploy, monitor, promote/rollback",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-hotfix-pipeline",
+  "homepage": "https://cortexprism.io/marketplace/plugins/hotfix-pipeline",
+  "capabilities": ["tools", "network:fetch"],
+  "tools": [
+    { "name": "hotfix_build", "description": "Build hotfix artifact", "params": [] },
+    { "name": "hotfix_smoke_test", "description": "Run smoke tests", "params": [] },
+    { "name": "hotfix_canary", "description": "Deploy to canary", "params": [] },
+    { "name": "hotfix_monitor", "description": "Monitor canary for 5 minutes", "params": [] },
+    { "name": "hotfix_promote", "description": "Promote to full or rollback", "params": [] }
+  ],
+  "dependencies": {},
+  "peerDependencies": { "cortex": ">=1.0.0" },
+  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+}
